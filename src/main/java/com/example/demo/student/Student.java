@@ -19,24 +19,25 @@ public class Student {
     )
     private Long id;
     private String name;
+    private String email;
 
     @Transient
     private Integer age;
 
     private LocalDate dob;
-    private String email;
+
 
     public Student() {
     }
 
-    public Student(Long id, String name, LocalDate dob, String email) {
+    public Student(Long id, String name, String email, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.dob = dob;
         this.email = email;
     }
 
-    public Student(String name, LocalDate dob, String email) {
+    public Student(String name, String email, LocalDate dob) {
         this.name = name;
 
         this.dob = dob;

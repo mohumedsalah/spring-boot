@@ -20,7 +20,6 @@ public class StudentService {
     }
 
     public void addNewStudent(Student student) {
-        System.out.println(student);
         var obj = repository.findStudentByEmail(student.getEmail());
         if (obj.isPresent()) {
             throw new IllegalArgumentException("Email Token");
